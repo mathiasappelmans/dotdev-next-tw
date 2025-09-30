@@ -34,7 +34,7 @@ const Navbar = () => {
 					<Image alt="" src="/mathias.png" width={100} height={100} />
 				</button>
 				{open && (
-					<Link href="/Mathias_Appelmans_2025.pdf" className="absolute z-50 top-10 sm:top-16 w-10 ml-3 sm:ml-8 sm:p-2 flex flex-col justify-center items-center gap-1 bg-opacity-20 bg-slate-900 px-2 py-1 rounded" target="_blank">
+					<Link href="/Mathias_Appelmans_2025_v1.pdf" className="absolute z-50 top-10 sm:top-16 w-10 ml-3 sm:ml-8 sm:p-2 flex flex-col justify-center items-center gap-1 bg-opacity-20 bg-slate-900 px-2 py-1 rounded" target="_blank">
 						<div className="text-xs">CV</div>						
 							<Image alt='' src={"/pdf.svg"} width={30} height={30} />						
 					</Link>
