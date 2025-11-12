@@ -1,7 +1,7 @@
 const DevIcon: React.FC<React.SVGProps<SVGSVGElement>> = props => {
 	return (
 		<svg width="86px" height="69px" viewBox="0 0 86 69" version="1.1" xmlns="http://www.w3.org/2000/svg" {...props}>
-			<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			<g id="Page-1" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
 				<g id="jobtype_web-dev2" fill={props.color}>
 					<g id="Group" >
 						<path d="M79.7,0.1 L6.3,0.1 C2.8,0.1 8.8817842e-16,2.9 8.8817842e-16,6.4 L8.8817842e-16,59.9 C8.8817842e-16,64.8 3.9,68.7 8.8,68.7 L77.2,68.7 C82.1,68.7 86,64.8 86,59.9 L86,6.4 C86,2.9 83.2,0.1 79.7,0.1 L79.7,0.1 Z M6.3,4.6 L79.7,4.6 C80.7,4.6 81.5,5.4 81.5,6.4 L81.5,11.9 L4.5,11.9 L4.5,6.4 C4.5,5.4 5.3,4.6 6.3,4.6 L6.3,4.6 Z M4.5,59.9 L4.5,16.3 L21.8,16.3 L21.8,64.2 L8.8,64.2 C6.4,64.2 4.5,62.3 4.5,59.9 L4.5,59.9 Z M77.2,64.2 L26.2,64.2 L26.2,16.3 L81.5,16.3 L81.5,59.8 C81.5,62.3 79.6,64.2 77.2,64.2 L77.2,64.2 Z" id="Shape"></path>
