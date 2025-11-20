@@ -8,7 +8,7 @@ https://nextjs.org/docs/app/api-reference/file-conventions/middleware
 */
 
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import type { NextRequest } from "next/server";                                               
 
 export function middleware(request: NextRequest) {
   // Clone the request headers so that we don't modify the original headers object
