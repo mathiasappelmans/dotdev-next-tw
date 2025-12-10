@@ -5,7 +5,7 @@ export const slides = [
 		title: "React Leaflet",
 		img: "/leaflet.png",
 		imgsmall: "/geo.png",
-		url: "https://dotdev.be/geo",
+		url: "https://mathiasappelmans.be/geo",
 		gitHubUrl: "https://github.com/tomatoweb/dotdev-next-tw/blob/main/src/components/maps/index.jsx",
 		icon: "/react.png",
 		description: "React Leaflet in a Next.js application to visualize geographical data. Functional add/remove markers. Prisma ORM",
