@@ -90,10 +90,10 @@ export const slides = [
 	{
 		id: 8,
 		type: "React App",
-		title: "Immo with Native React",
+		title: "Real Estate app with Native React",
 		img: "/immo-react-vite-sass.png",
-		imgsmall: "/agency-small.png",
-		url: "https://agency.dotdev.be",
+		imgsmall: "/immo.png",
+		url: "https://immo.dotdev.be",
 		gitHubUrl: "https://github.com/tomatoweb/immo-react-vite",
 		icon: "/react.png",
 		description: "Immo application built with Native React and Vite. Features property listings, search functionality, and user profiles",
