@@ -5,7 +5,7 @@ const nextConfig = {
         allowedOrigins: ['mathiasappelmans.be'],
       },
     reactCompiler: true,
-    ppr: 'incremental'
+    cacheComponents: true, // Enables PPR and better caching
   },
 };
 
