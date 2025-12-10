@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -19,9 +23,26 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/ip/page.js", "src/app/svg/Symfony.jsx", "src/app/svg/Github.jsx", "src/app/svg/ArrowRight.jsx", "src/app/(blank-layout-pages)/geo/page.tsx", "src/components/maps/index.jsx", "src/app/components/DropCV.jsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/ip/page.js",
+    "src/app/svg/Symfony.jsx",
+    "src/app/svg/Github.jsx",
+    "src/app/svg/ArrowRight.jsx",
+    "src/app/(blank-layout-pages)/geo/page.tsx",
+    "src/components/maps/index.jsx",
+    "src/app/components/DropCV.jsx",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
