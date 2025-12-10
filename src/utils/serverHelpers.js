@@ -4,7 +4,7 @@ import { headers, cookies } from 'next/headers'
 export const getUserAcceptCookie = async () => {
 	
 	const cookieStore = await cookies()
-
+	
 	return cookieStore.get('accept-cookie')
 }
 

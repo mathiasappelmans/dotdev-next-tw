@@ -1,19 +1,31 @@
-export default async function Visitors() {
+import { Suspense } from "react";
 
-    const response = await fetch(process.env.URL + '/api/visitors/', { cache: "no-store" })
+export default function Visitors() {
+
+	return (
+		<Suspense fallback={<div></div>} >
+				<GetVisitors />
+		</Suspense>
+	);
     
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
+}
 
-    const res = await response.json();
-    const lines = res.data
 
-    return (
-        <div>
-            {[...lines].reverse().map((line: any, index: any) => (
-                <p key={index} className='text-sm'>{line}</p>
-            ))}          
-        </div>
-    );
+async function GetVisitors() {
+	const response = await fetch(process.env.URL + '/api/visitors/', { cache: "no-store" })
+    
+	if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+	}
+
+	const res = await response.json();
+	const lines = res.data
+
+	return (
+			<div>
+					{[...lines].reverse().map((line: any, index: any) => (
+							<p key={index} className='text-sm'>{line}</p>
+					))}          
+			</div>
+	);
 }

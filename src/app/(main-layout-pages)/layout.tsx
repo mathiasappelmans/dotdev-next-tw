@@ -11,42 +11,51 @@ import Footer from "../components/Footer";
 import Ipinfo from "../components/Ipinfo";
 import CookiesBar from "../components/CookiesBar";
 import { getUserAcceptCookie } from '@/utils/serverHelpers'
+import { Suspense } from "react";
 
 const roboto = DM_Sans({
-  weight: ['400', '500', '600', '700', '800'],
-  subsets: ['latin'],
+	weight: ['400', '500', '600', '700', '800'],
+	subsets: ['latin'],
 });
 const poppins = Poppins({
-  weight: ['400', '500', '600', '700', '800'],
-  subsets: ['latin'],
+	weight: ['400', '500', '600', '700', '800'],
+	subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Mathias Appelmans mathiasappelmans.be",
-  description: "Mathias Appelmans Web developer React PHP",
+	title: "Mathias Appelmans mathiasappelmans.be",
+	description: "Mathias Appelmans Web developer React PHP",
 };
 
-async function RootLayout( { children } : Readonly<{children: React.ReactNode;}>) {
+async function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
 
+	return (
+		<html lang="en">
+			<body className={roboto.className}>
+				<Suspense fallback={<div></div>}>
+					<GetCookiesBar />
+				</Suspense>
+				<div className="2xl:py-10 pt-9 ease-in duration-300">
+					<div className="px-4 m-auto xl:max-w-[1240px] 2xl:max-w-[1320px]">
+						<Navbar />
+						<Ipinfo />
+					</div>
+				</div>
+				<div className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-80 bg-transparent overflow-hidden">
+					{children}
+				</div>
+				<Footer />
+			</body>
+		</html>
+	);
+}
+
+async function GetCookiesBar() {
+
+	//const cookies = false
 	const cookies = await getUserAcceptCookie()
-
-  return (
-    <html lang="en">
-      <body className={roboto.className}>
-        <CookiesBar cookies={cookies} />
-        <div className="2xl:py-10 pt-9 ease-in duration-300">
-          <div className="px-4 m-auto xl:max-w-[1240px] 2xl:max-w-[1320px]">
-            <Navbar />
-            <Ipinfo />
-          </div>
-        </div>
-        <div className="min-h-screen px-4 sm:px-8 md:px-16 lg:px-16 xl:px-16 2xl:px-80 bg-transparent overflow-hidden">
-          {children}
-        </div>
-        <Footer />
-      </body>
-    </html>
-  );
+	
+	return <CookiesBar cookies={cookies} />
 }
 
 export default RootLayout
