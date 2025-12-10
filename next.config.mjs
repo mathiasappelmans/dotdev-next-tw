@@ -4,7 +4,6 @@ const nextConfig = {
     serverActions: {
         allowedOrigins: ['mathiasappelmans.be'],
       },
-    reactCompiler: true,
     cacheComponents: true, // Enables PPR and better caching
   },
 };
