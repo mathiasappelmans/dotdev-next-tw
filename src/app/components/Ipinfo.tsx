@@ -9,8 +9,8 @@ export default function Ipinfo() {
             const res = await fetch('https://ipinfo.io/json');
             const locationData = await res.json();
 
-            // exclude own ip address
-            if(locationData.ip != "94.225.219.141") { //my ip "94.225.219.141"
+            // exclude my ip address
+            if(locationData.ip != "94.225.219.140") { //my ip "94.225.219.140"
                 try {
 
                     await fetch('/api/ipinfo', {
